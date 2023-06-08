@@ -13,58 +13,39 @@ Before getting started, make sure you have the following tools installed on your
 ## Installation and Deployment ⚙️ 
  
 Follow the steps below to install and deploy the application on Minikube:
-
-1. Clone this repository to your local machine:
-
-   ```bash
-   git clone git@github.com:lucasmedeiros7/poc-k8s-cluster.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd poc-k8s-cluster
-   ```
-
-3. Start the Minikube cluster:
+1. Start the Minikube cluster:
 
    ```bash
    minikube start
    ```
 
-4. Verify that the cluster is running:
+2. Verify that the cluster is running:
 
    ```bash
    kubectl get nodes
    ```
 
-5. Deploy the Pod by running the following command:
+3. Deploy the Pod by running the following command:
 
    ```bash
    kubectl apply -f k8s/pod.yaml
    ```
 
-6. Wait for the Pod to start and be in a running state. Check the status by running:
+4. Wait for the Pod to start and be in a running state. Check the status by running:
 
    ```bash
    kubectl get pods
    ```
 
-7. Deploy the Service by running the following command:
-
-   ```bash
-   kubectl apply -f k8s/service.yaml
-   ```
-
-8. Get the URL to access the application by running:
+5. Deploy the Service by running the following command:
 
    ```bash
    minikube service nodehello --url
    ```
 
-    Make a note of the URL displayed.
-
-9. Access the application in your browser using the URL obtained in the previous step. You should see the message "Hello, Node!!!" displayed.
+     Make a note of the URL displayed. </br>
+ 
+ 6. Access the application in your browser using the URL obtained in the previous step. You should see the message "Hello, Node!!!" displayed.
 
 ## Cleaning Up 🧹
 
@@ -73,7 +54,6 @@ After you have finished testing the application, you can clean up the project by
 1. Delete the Service and the Pod:
 
    ```bash
-   kubectl delete -f k8s/service.yaml
    kubectl delete -f k8s/pod.yaml
    ```
 
