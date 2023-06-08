@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodehello
+spec:
+  containers:
+    - name: nodehello
+      image: vrvx7/nodehello
+      ports:
+        - containerPort: 3000
